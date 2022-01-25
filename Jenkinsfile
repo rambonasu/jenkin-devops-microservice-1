@@ -51,9 +51,9 @@ pipeline {
 
 		stage('Build Docker Image') {
 			steps {
-				//"docker build -t rambonasu/git:$env.BUILD_TAG"
+				//"docker build -t rambonasu/hello-world-java:$env.BUILD_TAG"
 				script {
-					dockerImage = docker.build("rambonasu/git:${env.BUILD_TAG}")
+					dockerImage = docker.build("rambonasu/hello-world-java:${env.BUILD_TAG}")
 				}
 
 			}
